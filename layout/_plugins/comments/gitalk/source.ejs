@@ -1,3 +1,4 @@
+<script src="/js/md5.min.js"></script>
 <% if (theme.comments.use === 'gitalk') { %>
     <script>
         function loadComment() {
@@ -11,7 +12,7 @@
                     repo: '<%= theme.comments.gitalk.repo %>',
                     owner: '<%= theme.comments.gitalk.owner %>',
                     admin: '<%= theme.comments.gitalk.owner %>',
-                    id: window.location.pathname,
+                    id: md5(window.location.pathname),
                     distractionFreeMode: false
                 });
                 gitalk.render('gitalk-container');

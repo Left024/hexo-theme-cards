@@ -14,11 +14,11 @@ head:
   
   # 网站图标
   favicon:
-    ico: 
-    small: 
-    medium: 
-    apple_touch_icon: 
-    safari_pinned_tab: 
+    ico: /images/favicon.ico
+    small: /images/favicon-16x16.png
+    medium: /images/favicon-32x32.png
+    apple_touch_icon: /images/apple-touch-icon.png
+    safari_pinned_tab: /images/safari-pinned-tab.svg 
   
   # 社交分享链接
   opengraph: 
@@ -46,7 +46,7 @@ head:
 navbar: 
 
   # 左侧名称显示
-  sitename: Demo
+  sitename: Left's blog
   
   # 右侧站内导航链接
   menu: 
@@ -56,10 +56,12 @@ navbar:
       url: /tags/
     - name: 归档
       url: /archives/
-    - name: 友链
-      url: /friends/
-    - name: Page
-      url: /page/
+    - name: RSS
+      url: /atom.xml
+    #- name: 友链
+    #  url: /friends/
+    #- name: Page
+    #  url: /page/
 
   # 导航栏永远显示在屏幕顶端
   # 仅当屏幕宽度不小于 1080 px 时生效
@@ -69,13 +71,13 @@ navbar:
 cover: 
 
   # 显示在最上方 cover 处的站点名称
-  sitename: Demo
+  sitename: 备用站点
 
   # 若 avatar 配置不为空，则优先使用 avatar 覆盖 sitename
   avatar: 
   
   # sitename/avatar 下方的一句话介绍
-  description: Hi, nice to meet you!
+  description: 其实我觉得比主站好看
 
 
 
@@ -103,10 +105,10 @@ style:
   highlight: 
 
     # 默认代码高亮主题
-    default: 
+    default: github
 
     # 暗色代码高亮主题
-    darkmode: 
+    darkmode: atom-one-dark-reasonable
 
   # highlight.js 代码高亮
   hljs: 
@@ -139,8 +141,8 @@ meta:
   
   # 默认文章作者（可在front-matter中覆盖）
   author:
-    name: ChrAlpha
-    url: https://chralpha.com
+    name: Left
+    url: https://left024.github.io
   
   # 文章创建日期
   date:
@@ -154,23 +156,23 @@ meta:
 
   # 文章缩略图
   thumbnail: 
-    enable: false
+    enable: true
     default:   # 默认缩略图，当页面 `thumbnail` 字段为空时 fallback 至此参数
 
   # 文章过时提醒
   expire: 
-    enable: false
-    duration: 120  # 超过此天数则显示过期提醒
+    enable: true
+    duration: 60  # 超过此天数则显示过期提醒
 
   # 文章自动摘要
   auto_excerpt: 
-    enable: false
+    enable: true
     length: 150
 
   # 文章目录
   toc: 
-    enable: false
-    list_number: false
+    enable: true
+    list_number: true
 
   # 文章版权声明
   copyright: 
@@ -188,7 +190,8 @@ meta:
 # ---------------------------------------------------------------
 
 comments: 
-  use:   # disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
+  use: gitalk
+  # disqus | disqusjs | valine | minivaline | gitalk | gitment | levere | changyan | wildfire
 
   # Disqus
   disqus:  
@@ -247,10 +250,11 @@ comments:
 
   # Gitalk
   gitalk:
-    repo:
-    owner:
-    clientID:
-    clientSecret:
+    repo: left024.github.io
+    owner: left024
+    id: location.href
+    clientID: ${{ secrets.CLIENTID }}
+    clientSecret: ${{ secrets.CLIENTSECRET }}
 
   # Gitment
   gitment:
@@ -308,7 +312,7 @@ comments:
 
 analytics:
   google_site_id:
-  gtags_site_id:
+  gtags_site_id: G-0YSPL22K9R
   baidu_site_id: 
   cnzz_site_id: 
   cloudflare_site_id: 
@@ -375,17 +379,17 @@ footer:
 
 # 图片懒加载插件
 lazyload:
-  enable: false
+  enable: true
   loadingImage: 
 
 # 站内搜索插件
 search:
-  enable: false
+  enable: true
   path: search.json
   field: All  # Page | Post | All
 
 # note 标签插件
-note: false
+note: true
 
 # fold 内容折叠插件
 fold: 
@@ -395,14 +399,14 @@ fold:
 
 # 图片点击放大插件
 fancybox: 
-  enable: false
+  enable: true
   auto: false
   
 # 返回顶部
-back_to_top: false
+back_to_top: true
 
 # 深色模式
-darkmode: false
+darkmode: true
 
 # Mermaid Diagrams
 mermaid: 
