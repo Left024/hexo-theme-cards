@@ -32,7 +32,8 @@ head:
     fb_app_id: 
 
   # 自定义 head
-  custom_head: 
+  custom_head:
+    <script async defer data-website-id="10bdbc20-ef2e-4f93-9d54-5ddc71e4f257" src="https://umami.left.pink/umami.js"></script> 
     # - ''
     # - ''
 
@@ -314,7 +315,7 @@ comments:
 
 analytics:
   google_site_id:
-  gtags_site_id: G-0YSPL22K9R
+  gtags_site_id: 
   baidu_site_id: 
   cnzz_site_id: 
   cloudflare_site_id: 
