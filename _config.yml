@@ -254,7 +254,7 @@ comments:
   # Gitalk
   gitalk:
     repo: left024.github.io
-    owner: left024
+    owner: Left024
     id: location.href
     clientID: ${{ secrets.CLIENTID }}
     clientSecret: ${{ secrets.CLIENTSECRET }}
